@@ -1,6 +1,6 @@
 # `dind-isolated`
 Use this to run a docker daemon (in docker) in the background of a container
-while you access it in the forground.
+while you access it in the foreground.
 
 It is based on [`docker:dind`](https://hub.docker.com/_/docker).
 
