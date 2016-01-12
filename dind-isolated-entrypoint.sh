@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-dockerd-entrypoint.sh > /etc/docker-daemon-logs 2>&1 &
+dockerd-entrypoint.sh $DOCKER_DAEMON_FLAGS > /etc/docker-daemon-logs 2>&1 &
 
 echo "waiting for docker daemon..."
 

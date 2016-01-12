@@ -36,3 +36,6 @@ Share images, automate workflows, and more with a free Docker Hub account:
 For more examples and ideas, visit:
  https://docs.docker.com/userguide/
 ```
+
+
+The flags set in `DOCKER_DAEMON_FLAGS` will be passed to the daemon. 
