@@ -4,7 +4,12 @@ while you access it in the foreground.
 
 It is based on [`docker:dind`](https://hub.docker.com/_/docker).
 
-I am using it for Gitlab CI builds.
+I am using it for Gitlab CI builds, so I have it install Docker Compose
+and Git as well.
+
+This requires [overlayfs](https://docs.docker.com/engine/userguide/storagedriver/overlayfs-driver/)
+on the host machine, so that the containairized docker can use it as well.
+ 
 
 ```bash
 $ docker run --rm --privileged saulshanabrook/dind-isolated docker run hello-world

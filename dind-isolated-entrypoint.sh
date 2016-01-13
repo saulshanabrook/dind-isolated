@@ -1,7 +1,11 @@
 #!/bin/sh
 set -e
 
-dockerd-entrypoint.sh $DOCKER_DAEMON_FLAGS > /etc/docker-daemon-logs 2>&1 &
+docker daemon \
+    --host=unix:///var/run/docker.sock \
+    --host=tcp://0.0.0.0:2375 \
+    --storage-driver=overlay $DOCKER_DAEMON_FLAGS \
+    > /etc/docker-daemon-logs 2>&1 &
 
 echo "waiting for docker daemon..."
 
